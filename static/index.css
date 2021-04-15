@@ -114,6 +114,7 @@
     margin: auto;
     padding: 0;
     width: 98%;
+    padding-bottom: 60px;
   }
 
   #messages li {
