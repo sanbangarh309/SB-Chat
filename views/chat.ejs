@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Chat</title>
+  <link rel="icon" href="/static/favicon_chat.png">
+
+  <div id=nodejs_workshop_chat_header>
+    <h1 id=title>Chat</h1>
+  </div>
+
+  <!-- Note that the index.css file is available by using 'express.static' function in server.js -->
+  <link rel="stylesheet" type="text/css" href="static/index.css" />
+  <link rel="stylesheet" type="text/css" href="static/custom.css" />
+
+  <!-- Load javascript codes -->
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+</head>
+
+<body>
+  <div id=general_information_center>
+    <div id=logged_as_info></div>
+    <ul id=username_is_typing_board style="padding-top:10px">
+      <h3>💭 Who's typing:</h3>
+    </ul>
+    <h2 style="margin-top: 20px">Users List:</h2>
+    <ul id=chal_list_box></ul>
+
+    <ul id=logs_board class=general_information_center_bottom></ul>
+    <div id=num_users_online_number class=general_information_center_bottom></div>
+  </div>
+
+  <div id=messages_center>
+    <ul id="messages"></ul>
+    <form id=message_form action="">
+      <input id="message_form_input" autocomplete="off" autofocus="autofocus" placeholder="Type a message" />
+      <button>Send 📡</button>
+    </form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script id=client_script src="/static/client.js"></script>
+</body>
+
+</html>
